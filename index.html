@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Remote controller robot for an immersive telepresence experience.">
+  <meta name="keywords" content="Rollbody, Robot, Telepresence">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rollbody: A Telepresence Robot</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Rollbody: A Telepresence Robot</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/philippwulff/">Philipp Wulff</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/danylo-semerak">Dan Semerak</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/johannes-kirmayr-4ba5a119b">Johannes Kirmayr</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/eminvergili">Emin Vergili</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a>Deniz Seven</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/philipp-knestel-b24806142">Philipp Knestel</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a>Jefferson Chen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a>Alona Kharchenko</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Roboy Student Team SS2022 @ TU Munich,</span>
+            <span class="author-block"><sup>2</sup>Devanthro</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-medium"></i>
+                  </span>
+                  <span>Blog Post</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/team.jpg" alt="Team Photo">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Rollbody</span> allows a remote operator wearing a VR headset 
+        to have an immersive telepresence experience. This robot was built as a university 
+        project in the summer semester of 2022.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- img aspect ratio is 3:4 -->
+        <div class="item item-chair-tp">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/final_demo_2_720.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/driving_back_720.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/first_person_better_quality.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/final_demo_1_720.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/robot_retails_720.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/de_museum_2_720.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/de_museum_720.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline width="100%">
+            <source src="static/videos/rollbody_gen1_720.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">The Challenge</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our robot's big brother <a class="dnerf" href="http://www.roboy.org">Roboy</a> does not walk on his two legs yet.
+            Therefore, as our main challenge we wanted to build a mobile telepresence that is operated through remote control in a virtual reality environment.
+          </p>
+          <p>
+            In order to develop an intuitive and immersive telepresence experience, we also researched relative topics on computer vision, control, etc.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- YT video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Final Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+        </div>
+      </div>
+    </div>
+    <!--/ YT video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- M Eng. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Mechanical & Electrical Engineering</h2>
+
+        <div class="columns is-centered">
+          <!-- CAD. -->
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-4">CAD</h2>
+              <p>
+                The body structure of <span class="dnerf">Rollbody</span> is built ontop of a <i>Segway Loomo</i> and made out of <i>Bosch profiles</i>.
+                Although our robot was self-balancing in the beginning of the development process, it required support wheels
+                after we added more cameras, a tablet and the height adjustment mechanism.
+              </p>
+              <div class="publication-video">
+                <div class="sketchfab-embed-wrapper"> <iframe title="Rollbody Robot" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/cd2ee0f45e2b4c2f8a838cf8ddc78aa3/embed?autostart=1"> </iframe> </div>
+              </div>
+            </div>
+          </div>
+          <!--/ CAD. -->
+
+        </div>
+
+        <div class="columns is-centered">
+
+          <!-- Height Control. -->
+          <div class="column">
+            <h2 class="title is-4">Height Control</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <p>
+                  <span class="dnerf">Rollbody's</span> upper body features a telescopic height adjustment mechanism. 
+                  It is driven by a stepper motor that is connected to a spindle drive.
+                </p>
+                <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+                  <source src="static/videos/height_adjustment_720.mp4" type="video/mp4">
+                </video>
+              </div>
+    
+            </div>
+          </div>
+          <!--/ Height Control. -->
+
+          <!-- Power. -->
+          <div class="column">
+            <h2 class="title is-4">Power</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <p>
+                  The <i>Jetson Nano</i> is powered from the <i>Segway Loomo's</i> hardware extension bay. 
+                  Due to high energy consumption, the height-adjusting motor has an external battery.
+                </p>
+                <img src="static/images/electrical.jpg" alt="Electrical">
+              </div>
+    
+            </div>
+          </div>
+          <!--/ Power. -->
+
+        </div>
+
+      </div>
+    </div>
+    <!--/ M Eng. -->
+
+    <!-- S Eng. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Software Engineering</h2>
+
+        <div class="columns is-centered">
+          <!-- Locomotion. -->
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-4">Locomotion</h2>
+              <p>
+                We run a Java app on the <i>Segway Loomo's</i> Android OS that receives the motor commands via ROS 2 and controls the movement. 
+                Getting ROS 2 to work in Java was challenging, since it is not natively supported.
+              </p>
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/locomotion_720.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+          <!--/ Locomotion. -->
+
+          <!-- Head animation. -->
+          <div class="column">
+            <h2 class="title is-4">Head Animation</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <p>
+                  Visual feedback from a remote operator enhances the quality of the conversation. For this reason, we animate the operator 
+                  according to his speech and head movement in a <i>Unity</i> app. 
+                  Because this app runs in C# on Android, we cannot use ROS 2 and rely on a TCP connection to drive the animation instead.
+                </p>
+                <video id="matting-video" controls playsinline height="100%">
+                  <source src="static/videos/head_animation_720.mp4" type="video/mp4"></video>
+              </div>
+    
+            </div>
+          </div>
+          <!--/ Head animation. -->
+    
+        </div>
+
+        <div class="columns is-centered">
+
+          <!-- VR Unity. -->
+          <div class="column">
+            <h2 class="title is-4">VR Unity App</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <p>
+                  The robot operator wears an <i>Oculus Quest</i> VR headset on which we run a <i>Unity</i> app. This app connects to the robot's vision,
+                  hearing, voice and locomotion over the internet.
+                </p>
+                <video id="matting-video" controls playsinline height="100%">
+                  <source src="static/videos/loading_screen_480.mp4" type="video/mp4"></video>
+              </div>
+    
+            </div>
+          </div>
+          <!--/ VR UNity. -->
+
+          <!-- Vision. -->
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-4">180° Stereo Vision</h2>
+              <p>
+                Captured frames from the 180° fisheye cameras are projected 
+                ontop of half-spheres and the operator's FOV is rendered from the inside of them.
+                In practice, low bandwith limits the robot to monocular vision, even though 
+                we experimented with image compression mechanisms.
+              </p>
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+                <source src="static/videos/operator_480.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+          <!--/ Vision. -->
+        </div>
+
+        <div class="columns is-centered">
+          <!-- SW Arch. -->
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-4">Software Architecture</h2>
+              <p>
+                We run a <i>Unity</i> client app on the operator's VR headset (left side) which connects to the robot (right side) over the <i>Animus</i> cloud. 
+                On robot side, <i>animus_server</i> is a ROS 2 node that connects to the client's vision, audio and motor-command streams.
+                This server gathers/distributes the information from sensors/to actuator-nodes on the robot side.
+              </p>
+              <img src="static/images/software_architecture.jpg" alt="Software Architecture" /></img>
+            </div>
+          </div>
+          <!--/ SW Arch. -->
+        </div>
+
+      </div>
+    </div>
+    <!--/ S Eng. -->
+
+    <!-- Acknowledgements. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Acknowledgements</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There is a lot of excellent work that our project relies on. 
+          </p>
+          <p>
+            The cloud-streaming stack, the Unity-app running on the VR headset and the head animation of our robot are based on 
+            software that is used in <a href="https://roboy.org">Roboy</a>. We also repurpose some hardware 
+            components that were built by <a href="https://roboy.org/students/teams/">Roboy Student Teams</a> 
+            in previous semesters.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Acknowledgements. -->
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            We steal the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website from 
+            <a href="https://nerfies.github.io">Nerfies</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
