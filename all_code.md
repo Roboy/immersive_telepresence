@@ -4,7 +4,7 @@
 
 [[GitHub](https://github.com/Roboy/animus_server/tree/rollbody_ros2)]
 
-The connection to the animus cloud on robot side. Also contains the ROS 2 nodes for height control and the face animation.
+The connection to the animus cloud on robot side. Also contains the ROS 2 nodes for height control and the head animation.
 
 ## Rollbody VR App (Animus Client in Unity)
 
@@ -24,7 +24,7 @@ Can connect to the vision, proprioception and motor commands streams of Animus s
 
 The animated head/face that runs on an Android tablet. Connects to a ROS 2 node in `animus_server` (has a TCP server) via TCP to set the head angles of the animates head according to the operator's head rotation.
 
-## Java-ROS2 Node to drive the Segway Loomo
+## Java-ROS2 Node to drive the Segway Loomo ("Loomo Controller")
 
 [[GitHub](https://github.com/Roboy/ros2-loomo-controller)]
 
