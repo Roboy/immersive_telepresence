@@ -1,7 +1,5 @@
 # Rollbody's Software Stack
 
-![SW Architecture](static/images/software_architecture.jpg)
-
 ## Animus Server
 
 [[GitHub](https://github.com/Roboy/animus_server/tree/rollbody_ros2)]
@@ -31,4 +29,8 @@ Implements a ROS 2 node in Java using a ROS2-Android-bridge. Controls the Segway
 ## ROS2-Android Bridge
 
 [[GitHub](https://github.com/Roboy/ros2-android-build)]
+
+## Overview
+
+![SW Architecture](static/images/software_architecture.jpg)
 
