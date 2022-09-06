@@ -16,9 +16,13 @@ Can connect to the vision, proprioception and motor commands streams of Animus s
 
 [[GitHub](https://github.com/Roboy/RollbodyApp)]
 
+Unity app that runs on the operators's VR headset (tested with Oculus Quest). Connects to the vision, audition, proprioception and motor command streams and processes them.
+
 ## Rollbody's Head Animation (Unity)
 
 [[GitHub](https://github.com/Roboy/RollbodyUnityFace)]
+
+The animated head/face that runs on an Android tablet. Connects to a ROS 2 node in `animus_server` (has a TCP server) via TCP to set the head angles of the animates head according to the operator's head rotation.
 
 ## Java-ROS2 Node to drive the Segway Loomo
 
