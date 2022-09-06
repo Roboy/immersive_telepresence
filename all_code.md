@@ -6,17 +6,17 @@
 
 The connection to the animus cloud on robot side. Also contains the ROS 2 nodes for height control and the face animation.
 
+## Rollbody VR App (Animus Client in Unity)
+
+[[GitHub](https://github.com/Roboy/RollbodyApp)]
+
+Unity app that runs on the operators's VR headset (tested with Oculus Quest). Connects to the vision, audition, proprioception and motor command streams and processes them.
+
 ## Animus Python Debug Client
 
 [[GitHub](https://github.com/Roboy/animus_debug_client)]
 
 Can connect to the vision, proprioception and motor commands streams of Animus server for debugging purposes.
-
-## Rollbody VR App (Unity)
-
-[[GitHub](https://github.com/Roboy/RollbodyApp)]
-
-Unity app that runs on the operators's VR headset (tested with Oculus Quest). Connects to the vision, audition, proprioception and motor command streams and processes them.
 
 ## Rollbody's Head Animation (Unity)
 
