@@ -2,7 +2,7 @@
 
 ## Animus Server
 
-[[GitHub](https://github.com/Roboy/animus_server/tree/rollbody_ros2)]
+[[GitHub](https://github.com/Roboy/animus_server/tree/rollbody_ros2)] (private repository)
 
 The connection to the animus cloud on robot side. Also contains the ROS 2 nodes for height control and the head animation.
 
